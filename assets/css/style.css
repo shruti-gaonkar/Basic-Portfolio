@@ -9,12 +9,13 @@ body {
         font-size: 16px;
         color: #777777;
         display: flex;
+        min-height: 100vh;
         flex-direction: column;
 }
 
 header{
       text-align: center;
-      margin: 0 auto;
+      /*margin: 0 auto;*/
       background-color: #ffffff;
       border-bottom: 2px solid #cccccc;
 }
@@ -42,15 +43,20 @@ p{
     color: #777777;
     line-height: 1.8em; 
     margin-bottom: 0.7em;
-    padding-top:0.6em;
+    /*padding-top:0.6em;*/
 }
 
 a{
     color: #777777;
     text-decoration: none;
+    cursor: pointer;
 }
 
-a:hover, a:selected{
+a:hover, a:active{
+    color: #333333;
+}
+
+a.selected{
     color: #333333;
 }
 
@@ -88,10 +94,7 @@ nav{
 
 nav a{
     padding:0 0 0 10px;
-}
-
-.wrapper {
-    flex: 1 0 auto;
+    cursor: pointer;
 }
 
 .container{
@@ -100,11 +103,12 @@ nav a{
     overflow: hidden;
 }
 
-.section-one{
+main{
     background-image: url("../../assets/images/grey_sandbag.png");
+    flex: 1 0 auto;
 }
 
-.content{
+article{
     border: 2px solid #dddddd;
     background-color: #ffffff;
     margin: 35px 0 50px 0;
@@ -112,16 +116,20 @@ nav a{
     overflow: hidden;
 }
 
+section{
+    margin:20px 0 10px 0;
+}
+
 #profile-image{
     float: left;
-    width: 150px;
-    margin: 14px 20px 10px 0;
+    width: 200px;
+    margin: 5px 20px 10px 0;
 }
 
 .image-container {
     position: relative;
     width: 200px;
-    margin: 14px 20px 10px 0;
+    margin: 0 20px 20px 0;
 }
 
 .image-container .text-block {
@@ -137,6 +145,35 @@ nav a{
 
 .image-container:hover a {
     opacity: 0.3;
+}
+
+label{
+    line-height: 1.5em;
+}
+
+input{
+    width: 100%;
+    line-height: 1.5em;
+    margin-bottom: 0.5em; 
+}
+
+textarea{
+    width: 100%;
+    line-height: 5em;
+    margin-bottom: 0.5em;
+}
+
+button{
+    background-color: #4aaaa5;
+    line-height: 2.2em;
+    color: #ffffff;
+    border: none;
+    padding: 4px 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.6;
 }
 
 .footer {
