@@ -179,7 +179,19 @@ button{
 
 button:hover{
     opacity: 0.6;
+    border: none;
 }
+
+button:focus{
+    border: none;
+    background-color: #0c837d;
+}
+
+button:active{
+    border: none;
+    background-color: #045e59;
+}
+
 
 .footer {
     flex-shrink: 0;
